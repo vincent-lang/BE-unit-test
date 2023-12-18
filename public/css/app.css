@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+i.star {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.9em;
+    margin-right: 0.9em;
+    margin-bottom: 1.2em;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0.7em solid yellow;
+    border-left: 0.3em solid transparent;
+    font-size: 2em;
+}
+
+i.star::before,
+i.star::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0.6em;
+    left: -1em;
+    border-right: 1em solid transparent;
+    border-bottom: 0.7em solid yellow;
+    border-left: 1em solid transparent;
+    transform: rotate(-35deg);
+}
+
+i.star::after {
+    transform: rotate(35deg);
+}
+
+main.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+table * {
+    border: 0.1rem solid red;
+}

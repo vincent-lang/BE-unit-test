@@ -20,3 +20,12 @@ Route::get('/', function () {
 });
 
 Route::get('/gegevens', [GegevensController::class, 'index'])->name('gegevens.index');
+
+Route::get('/gegevens/create/product', [GegevensController::class, 'createProduct'])->name('product.create');
+
+Route::post('/gegevens/store/product', [GegevensController::class, 'storeProduct'])->name('product.store');
+
+
+Route::get('/gegevens/create/shop', [GegevensController::class, 'createShop'])->name('shop.create');
+
+Route::post('/gegevens/store/shop', [GegevensController::class, 'storeShop'])->name('shop.store');
